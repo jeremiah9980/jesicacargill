@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" fill="none">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1600" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#0B1020"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg2)"/>
+  <rect x="52" y="52" width="1496" height="896" rx="30" fill="#0F172A" stroke="#334155" stroke-opacity="0.35"/>
+  <rect x="76" y="76" width="300" height="848" rx="24" fill="#111827"/>
+  <text x="114" y="132" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">Template Library</text>
+  <text x="114" y="162" fill="#9FB0CB" font-family="Inter, Arial, sans-serif" font-size="16">Escrow Onboarding Playbook System</text>
+  <rect x="108" y="212" width="236" height="54" rx="14" fill="#1B2740" stroke="#22C55E" stroke-opacity="0.55"/>
+  <text x="136" y="246" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Checklist + Templates</text>
+  <rect x="108" y="286" width="236" height="46" rx="14" fill="#162033"/>
+  <text x="136" y="316" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="17">Scenario Guides</text>
+  <rect x="108" y="348" width="236" height="46" rx="14" fill="#162033"/>
+  <text x="136" y="378" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="17">Email Standards</text>
+  <rect x="108" y="410" width="236" height="46" rx="14" fill="#162033"/>
+  <text x="136" y="440" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="17">Document Naming</text>
+  <rect x="108" y="492" width="236" height="170" rx="18" fill="#0F172A" stroke="#334155" stroke-opacity="0.35"/>
+  <text x="128" y="528" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Library filters</text>
+  <text x="128" y="568" fill="#DCE8FB" font-family="Inter, Arial, sans-serif" font-size="16">• Role: Assistant</text>
+  <text x="128" y="600" fill="#DCE8FB" font-family="Inter, Arial, sans-serif" font-size="16">• Stage: Intake</text>
+  <text x="128" y="632" fill="#DCE8FB" font-family="Inter, Arial, sans-serif" font-size="16">• Type: Templates</text>
+
+  <rect x="404" y="76" width="1080" height="86" rx="24" fill="#111827"/>
+  <text x="440" y="122" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Checklist + Template Library</text>
+  <text x="440" y="147" fill="#9FB0CB" font-family="Inter, Arial, sans-serif" font-size="18">Searchable SOPs, templates, and exception handling guidance for title workflows</text>
+  <rect x="1208" y="96" width="236" height="44" rx="14" fill="#162033" stroke="#F97316" stroke-opacity="0.55"/>
+  <text x="1240" y="124" fill="#E5EEFB" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Search: payoff request</text>
+
+  <rect x="404" y="186" width="1080" height="738" rx="28" fill="#10172B" stroke="#334155" stroke-opacity="0.25"/>
+  <rect x="432" y="216" width="310" height="672" rx="22" fill="#111827"/>
+  <text x="462" y="258" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">Collections</text>
+  <rect x="462" y="284" width="250" height="54" rx="16" fill="#1B2740" stroke="#22C55E" stroke-opacity="0.55"/>
+  <text x="490" y="318" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Open File Checklists</text>
+  <rect x="462" y="354" width="250" height="48" rx="14" fill="#162033"/>
+  <text x="490" y="385" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="17">Email Templates</text>
+  <rect x="462" y="416" width="250" height="48" rx="14" fill="#162033"/>
+  <text x="490" y="447" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="17">Exception Handling</text>
+  <rect x="462" y="478" width="250" height="48" rx="14" fill="#162033"/>
+  <text x="490" y="509" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="17">Funding Standards</text>
+  <rect x="462" y="560" width="250" height="140" rx="18" fill="#0F172A" stroke="#334155" stroke-opacity="0.3"/>
+  <text x="482" y="596" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Saved by AI</text>
+  <text x="482" y="632" fill="#22C55E" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800">17%</text>
+  <text x="482" y="662" fill="#9FB0CB" font-family="Inter, Arial, sans-serif" font-size="15">reduction in repeat support requests</text>
+
+  <rect x="770" y="216" width="686" height="324" rx="22" fill="#111827"/>
+  <text x="800" y="258" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">Selected Template</text>
+  <text x="800" y="292" fill="#F97316" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="700">Missing Payoff Information Request</text>
+  <rect x="800" y="318" width="626" height="182" rx="18" fill="#162033"/>
+  <text x="826" y="356" fill="#E5EEFB" font-family="Inter, Arial, sans-serif" font-size="16">Subject: Payoff Information Needed for File Opening</text>
+  <text x="826" y="392" fill="#DCE8FB" font-family="Inter, Arial, sans-serif" font-size="15">Hi [Contact Name],</text>
+  <text x="826" y="422" fill="#DCE8FB" font-family="Inter, Arial, sans-serif" font-size="15">We are opening title on the above file and are still missing</text>
+  <text x="826" y="448" fill="#DCE8FB" font-family="Inter, Arial, sans-serif" font-size="15">the current payoff details. Please send the lender name, loan</text>
+  <text x="826" y="474" fill="#DCE8FB" font-family="Inter, Arial, sans-serif" font-size="15">number, and contact information at your earliest convenience.</text>
+  <rect x="800" y="514" width="148" height="42" rx="12" fill="#F97316"/>
+  <text x="842" y="540" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">Use Template</text>
+  <rect x="964" y="514" width="170" height="42" rx="12" fill="#1B2740" stroke="#22C55E" stroke-opacity="0.55"/>
+  <text x="996" y="540" fill="#E5EEFB" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">Ask AI to Adapt</text>
+
+  <rect x="770" y="566" width="328" height="322" rx="22" fill="#111827"/>
+  <text x="800" y="608" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">Checklist</text>
+  <circle cx="818" cy="648" r="8" fill="#22C55E"/><text x="840" y="654" fill="#E5EEFB" font-family="Inter, Arial, sans-serif" font-size="16">Buyer / seller details validated</text>
+  <circle cx="818" cy="692" r="8" fill="#F97316"/><text x="840" y="698" fill="#E5EEFB" font-family="Inter, Arial, sans-serif" font-size="16">Payoff request sent</text>
+  <circle cx="818" cy="736" r="8" fill="#334155"/><text x="840" y="742" fill="#E5EEFB" font-family="Inter, Arial, sans-serif" font-size="16">HOA verification pending</text>
+  <circle cx="818" cy="780" r="8" fill="#334155"/><text x="840" y="786" fill="#E5EEFB" font-family="Inter, Arial, sans-serif" font-size="16">Escalation note reviewed</text>
+
+  <rect x="1126" y="566" width="330" height="322" rx="22" fill="#111827"/>
+  <text x="1156" y="608" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">AI Support</text>
+  <rect x="1156" y="634" width="270" height="122" rx="18" fill="#162033"/>
+  <text x="1178" y="670" fill="#E5EEFB" font-family="Inter, Arial, sans-serif" font-size="16">Suggested next step:</text>
+  <text x="1178" y="700" fill="#DCE8FB" font-family="Inter, Arial, sans-serif" font-size="15">“Because the lender field is blank and</text>
+  <text x="1178" y="724" fill="#DCE8FB" font-family="Inter, Arial, sans-serif" font-size="15">the closing date is within 10 days, use</text>
+  <text x="1178" y="748" fill="#DCE8FB" font-family="Inter, Arial, sans-serif" font-size="15">the expedited payoff request template.”</text>
+  <rect x="1156" y="780" width="140" height="42" rx="12" fill="#1B2740" stroke="#22C55E" stroke-opacity="0.5"/>
+  <text x="1192" y="806" fill="#E5EEFB" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">Apply Action</text>
+</svg>
