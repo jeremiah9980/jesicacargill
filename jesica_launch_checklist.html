@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jesica's Business Launch — Action Plan</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F4F1EB;
+  --bg-card: #FFFFFF;
+  --teal: #C4501A;
+  --teal-mid: #D4621C;
+  --teal-light: #FDEEE5;
+  --teal-xlight: #FEF7F3;
+  --amber: #B86A1E;
+  --amber-light: #FEF3E4;
+  --green: #2D6A4F;
+  --green-light: #E8F5EE;
+  --red: #B91C1C;
+  --red-light: #FEE8E8;
+  --text: #1C1917;
+  --text-muted: #6B6860;
+  --border: #DDD9D0;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+  --shadow: 0 4px 12px rgba(0,0,0,.08), 0 1px 3px rgba(0,0,0,.04);
+  --radius: 12px;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ── Header ── */
+.site-header {
+  background: var(--teal);
+  color: white;
+  padding: 0 24px;
+}
+.header-inner {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 20px 0 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+.header-title h1 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: white;
+}
+.header-title p {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.72);
+  margin-top: 3px;
+}
+.overall-progress {
+  text-align: right;
+  min-width: 120px;
+}
+.progress-label {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.progress-count {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1;
+}
+.progress-bar-wrap {
+  background: rgba(255,255,255,.2);
+  border-radius: 4px;
+  height: 5px;
+  margin-top: 6px;
+  overflow: hidden;
+}
+.progress-bar-fill {
+  height: 100%;
+  background: rgba(255,255,255,.85);
+  border-radius: 4px;
+  transition: width .5s cubic-bezier(.4,0,.2,1);
+}
+
+/* ── Tabs ── */
+.track-tabs {
+  background: var(--teal);
+  padding: 0 24px;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+.tabs-inner {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  gap: 4px;
+}
+.tab-btn {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.62);
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  font-weight: 500;
+  padding: 12px 18px 10px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: color .2s, border-color .2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+.tab-btn:hover { color: rgba(255,255,255,.9); }
+.tab-btn.active {
+  color: white;
+  border-bottom-color: rgba(255,255,255,.9);
+}
+.tab-pill {
+  background: rgba(255,255,255,.18);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  padding: 1px 7px;
+  font-weight: 600;
+  min-width: 22px;
+  text-align: center;
+}
+.tab-btn.active .tab-pill {
+  background: rgba(255,255,255,.3);
+}
+
+/* ── Main content ── */
+.main {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 28px 24px 120px;
+}
+
+/* ── Track section ── */
+.track-section { display: none; }
+.track-section.visible { display: block; animation: fadeIn .25s ease; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+.track-header {
+  margin-bottom: 20px;
+}
+.track-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.track-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--teal);
+  letter-spacing: -0.02em;
+}
+.track-desc { font-size: 0.85rem; color: var(--text-muted); }
+.track-progress-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.track-progress-bar {
+  flex: 1;
+  height: 5px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.track-progress-fill {
+  height: 100%;
+  background: var(--teal);
+  border-radius: 4px;
+  transition: width .5s cubic-bezier(.4,0,.2,1);
+}
+.track-progress-text {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  min-width: 52px;
+  text-align: right;
+}
+
+/* ── Checklist items ── */
+.checklist { display: flex; flex-direction: column; gap: 8px; }
+
+.item-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1.5px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: border-color .2s, box-shadow .2s;
+  overflow: hidden;
+}
+.item-card:hover { border-color: #C5BDB2; box-shadow: var(--shadow); }
+.item-card.checked {
+  border-color: #B8D9C5;
+  background: #FAFDF9;
+}
+.item-card.urgent { border-left: 3px solid var(--amber); }
+.item-card.urgent-high { border-left: 3px solid var(--red); }
+
+.item-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 16px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Custom checkbox */
+.item-checkbox {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  border-radius: 6px;
+  border: 2px solid var(--border);
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+  transition: all .2s cubic-bezier(.4,0,.2,1);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.item-card.checked .item-checkbox {
+  background: var(--green);
+  border-color: var(--green);
+}
+.item-checkbox svg { opacity: 0; transform: scale(0.5); transition: all .2s cubic-bezier(.4,0,.2,1); }
+.item-card.checked .item-checkbox svg { opacity: 1; transform: scale(1); }
+
+.item-content { flex: 1; min-width: 0; }
+.item-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.item-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text);
+  transition: color .2s;
+}
+.item-card.checked .item-title {
+  color: var(--text-muted);
+  text-decoration: line-through;
+  text-decoration-color: #A0A0A0;
+}
+.item-summary {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+  line-height: 1.4;
+}
+.item-card.checked .item-summary { opacity: 0.6; }
+
+.badge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+.badge-teal { background: var(--teal-light); color: var(--teal); }
+.badge-amber { background: var(--amber-light); color: var(--amber); }
+.badge-red { background: var(--red-light); color: var(--red); }
+.badge-green { background: var(--green-light); color: var(--green); }
+.badge-gray { background: #F0EDE8; color: var(--text-muted); }
+
+.item-expand-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  padding: 0 0 0 8px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: color .2s, transform .2s;
+  align-self: flex-start;
+}
+.item-expand-btn:hover { color: var(--teal); }
+.item-expand-btn.open { transform: rotate(180deg); }
+
+.item-detail {
+  display: none;
+  padding: 0 16px 14px 52px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  border-top: 1px solid var(--border);
+  margin-top: 0;
+  padding-top: 12px;
+}
+.item-detail.open { display: block; animation: slideDown .2s ease; }
+@keyframes slideDown { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+.item-detail a { color: var(--teal); text-decoration: underline; font-weight: 500; }
+.item-detail strong { color: var(--text); font-weight: 600; }
+.detail-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--teal);
+  text-decoration: none;
+  border: 1.5px solid var(--teal-light);
+  padding: 5px 12px;
+  border-radius: 6px;
+  background: var(--teal-xlight);
+  transition: background .15s;
+}
+.detail-link:hover { background: var(--teal-light); }
+
+/* ── AI Floating button ── */
+.ai-fab {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  background: var(--teal);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(26,95,99,.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: transform .2s, box-shadow .2s;
+}
+.ai-fab:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(26,95,99,.5); }
+.ai-fab svg { color: white; }
+.ai-fab-label {
+  position: absolute;
+  bottom: 64px;
+  right: 0;
+  background: var(--teal);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity .2s, transform .2s;
+}
+.ai-fab:hover .ai-fab-label { opacity: 1; transform: translateY(0); }
+
+/* ── AI Chat Panel ── */
+.chat-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.18);
+  z-index: 200;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s;
+}
+.chat-overlay.open { opacity: 1; pointer-events: all; }
+
+.chat-panel {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 400px;
+  max-width: 100vw;
+  background: #FCFAF7;
+  z-index: 201;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform .3s cubic-bezier(.4,0,.2,1);
+  box-shadow: -4px 0 32px rgba(0,0,0,.12);
+}
+.chat-panel.open { transform: translateX(0); }
+
+.chat-header {
+  background: var(--teal);
+  color: white;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.chat-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.chat-header-text { flex: 1; }
+.chat-header-name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.chat-header-desc { font-size: 0.74rem; opacity: .72; margin-top: 1px; }
+.chat-close {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,.8);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  transition: background .15s;
+  display: flex;
+}
+.chat-close:hover { background: rgba(255,255,255,.15); }
+
+/* API key setup */
+.api-key-banner {
+  background: var(--amber-light);
+  border-bottom: 1px solid #F0C98A;
+  padding: 10px 16px;
+  font-size: 0.78rem;
+  color: var(--amber);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.api-key-banner.hidden { display: none; }
+.api-key-input-wrap {
+  display: flex;
+  gap: 6px;
+  padding: 10px 16px;
+  background: var(--amber-light);
+  border-bottom: 1px solid #F0C98A;
+  flex-shrink: 0;
+}
+.api-key-input-wrap.hidden { display: none; }
+.api-key-field {
+  flex: 1;
+  border: 1.5px solid #E0C090;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  background: white;
+  outline: none;
+  color: var(--text);
+}
+.api-key-field:focus { border-color: var(--teal); }
+.api-key-save {
+  background: var(--teal);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  scroll-behavior: smooth;
+}
+.chat-messages::-webkit-scrollbar { width: 4px; }
+.chat-messages::-webkit-scrollbar-track { background: transparent; }
+.chat-messages::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+.msg {
+  max-width: 88%;
+  animation: msgIn .2s ease;
+}
+@keyframes msgIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+.msg-user { align-self: flex-end; }
+.msg-ai { align-self: flex-start; }
+
+.msg-bubble {
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+.msg-user .msg-bubble {
+  background: var(--teal);
+  color: white;
+  border-radius: 14px 14px 4px 14px;
+}
+.msg-ai .msg-bubble {
+  background: white;
+  color: var(--text);
+  border: 1.5px solid var(--border);
+  border-radius: 14px 14px 14px 4px;
+  box-shadow: var(--shadow-sm);
+}
+.msg-ai .msg-bubble a { color: var(--teal); }
+
+/* Typing indicator */
+.typing-bubble {
+  display: inline-flex;
+  gap: 4px;
+  padding: 10px 14px;
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: 14px 14px 14px 4px;
+  box-shadow: var(--shadow-sm);
+}
+.typing-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--teal-mid);
+  animation: typingBounce 1.2s infinite ease;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.15s; }
+.typing-dot:nth-child(3) { animation-delay: 0.3s; }
+@keyframes typingBounce {
+  0%, 80%, 100% { transform: translateY(0); opacity: .5; }
+  40% { transform: translateY(-5px); opacity: 1; }
+}
+
+/* Quick prompts */
+.quick-prompts {
+  padding: 10px 16px 6px;
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.quick-prompts-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 7px;
+}
+.quick-prompts-scroll {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: none;
+}
+.quick-prompts-scroll::-webkit-scrollbar { display: none; }
+.quick-chip {
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color .15s, background .15s;
+  font-family: var(--font-body);
+}
+.quick-chip:hover { border-color: var(--teal); background: var(--teal-xlight); color: var(--teal); }
+
+/* Chat input */
+.chat-input-area {
+  padding: 10px 16px 16px;
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+  background: white;
+}
+.chat-input-row {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+}
+.chat-textarea {
+  flex: 1;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 9px 12px;
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  resize: none;
+  outline: none;
+  line-height: 1.5;
+  max-height: 100px;
+  min-height: 38px;
+  background: var(--bg);
+  color: var(--text);
+  transition: border-color .15s;
+}
+.chat-textarea:focus { border-color: var(--teal); background: white; }
+.chat-send {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 9px;
+  background: var(--teal);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: background .15s, transform .1s;
+}
+.chat-send:hover { background: var(--teal-mid); }
+.chat-send:active { transform: scale(0.94); }
+.chat-send:disabled { background: var(--border); cursor: not-allowed; }
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .header-inner { flex-direction: column; gap: 10px; }
+  .overall-progress { text-align: left; }
+  .chat-panel { width: 100vw; }
+  .tab-btn { padding: 12px 12px 10px; font-size: 0.78rem; }
+  .main { padding: 20px 16px 100px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ── SITE HEADER ── -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-title">
+      <h1>Jesica's Business Launch</h1>
+      <p>Georgetown, TX · Woman-Owned LLC · 2026</p>
+    </div>
+    <div class="overall-progress">
+      <div class="progress-label">Progress</div>
+      <div class="progress-count" id="overallCount">0 / 23</div>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-fill" id="overallBar" style="width:0%"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ── TABS ── -->
+<nav class="track-tabs">
+  <div class="tabs-inner">
+    <button class="tab-btn active" onclick="switchTab('llc')" id="tab-llc">
+      Track 1 — File the LLC
+      <span class="tab-pill" id="pill-llc">0</span>
+    </button>
+    <button class="tab-btn" onclick="switchTab('vehicle')" id="tab-vehicle">
+      Track 2 — Vehicle
+      <span class="tab-pill" id="pill-vehicle">0</span>
+    </button>
+    <button class="tab-btn" onclick="switchTab('grants')" id="tab-grants">
+      Track 3 — Grants
+      <span class="tab-pill" id="pill-grants">0</span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── MAIN ── -->
+<main class="main">
+
+  <!-- TRACK 1: LLC -->
+  <section class="track-section visible" id="section-llc">
+    <div class="track-header">
+      <div class="track-header-row">
+        <div>
+          <div class="track-title">File the LLC</div>
+          <div class="track-desc">The foundation. Everything else depends on this. Target: 1–2 weeks.</div>
+        </div>
+      </div>
+      <div class="track-progress-row">
+        <div class="track-progress-bar"><div class="track-progress-fill" id="bar-llc" style="width:0%"></div></div>
+        <div class="track-progress-text" id="text-llc">0 / 8</div>
+      </div>
+    </div>
+    <div class="checklist" id="list-llc"></div>
+  </section>
+
+  <!-- TRACK 2: VEHICLE -->
+  <section class="track-section" id="section-vehicle">
+    <div class="track-header">
+      <div class="track-header-row">
+        <div>
+          <div class="track-title">Vehicle Purchase</div>
+          <div class="track-desc">100% bonus depreciation is back in 2026. Buy right and the savings are real.</div>
+        </div>
+      </div>
+      <div class="track-progress-row">
+        <div class="track-progress-bar"><div class="track-progress-fill" id="bar-vehicle" style="width:0%"></div></div>
+        <div class="track-progress-text" id="text-vehicle">0 / 7</div>
+      </div>
+    </div>
+    <div class="checklist" id="list-vehicle"></div>
+  </section>
+
+  <!-- TRACK 3: GRANTS -->
+  <section class="track-section" id="section-grants">
+    <div class="track-header">
+      <div class="track-header-row">
+        <div>
+          <div class="track-title">Grant Applications</div>
+          <div class="track-desc">Upside, not income — but $15 and 30 min/month is worth the shot.</div>
+        </div>
+      </div>
+      <div class="track-progress-row">
+        <div class="track-progress-bar"><div class="track-progress-fill" id="bar-grants" style="width:0%"></div></div>
+        <div class="track-progress-text" id="text-grants">0 / 8</div>
+      </div>
+    </div>
+    <div class="checklist" id="list-grants"></div>
+  </section>
+
+</main>
+
+<!-- ── AI FAB ── -->
+<button class="ai-fab" onclick="openChat()" aria-label="Open AI Guide">
+  <span class="ai-fab-label">Ask your guide</span>
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+  </svg>
+</button>
+
+<!-- ── CHAT OVERLAY ── -->
+<div class="chat-overlay" id="chatOverlay" onclick="closeChat()"></div>
+
+<!-- ── CHAT PANEL ── -->
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-header">
+    <div class="chat-avatar">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+        <circle cx="12" cy="17" r=".5" fill="white"/>
+      </svg>
+    </div>
+    <div class="chat-header-text">
+      <div class="chat-header-name">Your Launch Guide</div>
+      <div class="chat-header-desc">Knows your LLC, vehicle, and grant details</div>
+    </div>
+    <button class="chat-close" onclick="closeChat()" aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="api-key-banner" id="apiKeyBanner">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    Paste your Anthropic API key below to activate the AI assistant.
+  </div>
+  <div class="api-key-input-wrap" id="apiKeyInputWrap">
+    <input type="password" class="api-key-field" id="apiKeyField" placeholder="sk-ant-..." />
+    <button class="api-key-save" onclick="saveApiKey()">Activate</button>
+  </div>
+
+  <div class="chat-messages" id="chatMessages">
+    <div class="msg msg-ai">
+      <div class="msg-bubble">
+        Hi Jesica 👋 I know your full plan — the LLC, the vehicle write-off, and all the grants. Ask me anything and I'll give you a direct answer.<br><br>
+        Not sure where to start? Just ask <strong>"What should I do today?"</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="quick-prompts">
+    <div class="quick-prompts-label">Quick questions</div>
+    <div class="quick-prompts-scroll">
+      <button class="quick-chip" onclick="sendQuick('What should I do today?')">What should I do today?</button>
+      <button class="quick-chip" onclick="sendQuick('How do I file the Texas LLC?')">How do I file the LLC?</button>
+      <button class="quick-chip" onclick="sendQuick('How does the vehicle write-off actually work?')">Vehicle write-off?</button>
+      <button class="quick-chip" onclick="sendQuick('Which grants can I apply for right now?')">Grants I can apply now?</button>
+      <button class="quick-chip" onclick="sendQuick('What is the Hey Helen grant?')">Hey Helen grant?</button>
+      <button class="quick-chip" onclick="sendQuick('What documents do I need to apply for grants?')">Grant documents?</button>
+      <button class="quick-chip" onclick="sendQuick('How do I write my grant narrative?')">Write my narrative?</button>
+    </div>
+  </div>
+
+  <div class="chat-input-area">
+    <div class="chat-input-row">
+      <textarea class="chat-textarea" id="chatInput" placeholder="Ask anything about your launch…" rows="1"
+        onkeydown="if(event.key==='Enter' && !event.shiftKey){event.preventDefault();sendMessage()}"
+        oninput="autoGrow(this)"></textarea>
+      <button class="chat-send" id="sendBtn" onclick="sendMessage()" aria-label="Send">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ────────────────────────────────────────────────────────────
+// CHECKLIST DATA
+// ────────────────────────────────────────────────────────────
+const TRACKS = {
+  llc: {
+    items: [
+      {
+        id: 'llc1',
+        title: 'Decide the ownership structure',
+        badge: 'Do first', badgeType: 'teal',
+        summary: '100% Jesica = qualifies for every grant. Splitting ownership costs eligibility.',
+        detail: '<strong>Recommendation: file as sole member (100% Jesica).</strong> This qualifies for Hey Helen ($10K — requires 100% women-owned) and all 51%+ programs. Easier to add a member later than to explain shared ownership to a grant judge. The operating agreement will document that Jesica holds day-to-day management authority.',
+        link: null, linkLabel: null
+      },
+      {
+        id: 'llc2',
+        title: 'Search your business name',
+        badge: null,
+        summary: 'Check SOSDirect to confirm name availability before filing.',
+        detail: 'Go to <a href="https://dir.sos.state.tx.us/pls/apex/f?p=2010:1" target="_blank">dir.sos.state.tx.us</a> and search your intended name. The name must be distinguishable from other Texas entities. Tip: include your own name or location to make it distinctive (e.g., "Cargill Closing Services LLC" or "Georgetown Title Consulting LLC").',
+        link: 'https://dir.sos.state.tx.us/pls/apex/f?p=2010:1', linkLabel: 'Search on SOSDirect'
+      },
+      {
+        id: 'llc3',
+        title: 'File Form 205 with the Texas Secretary of State',
+        badge: '$300', badgeType: 'amber',
+        summary: 'Certificate of Formation — online approval in 1–2 business days.',
+        detail: '<strong>Where:</strong> sos.state.tx.us/corp/sosda (SOSDirect portal)<br><strong>Cost:</strong> $300 state fee + 2.7% card surcharge (~$8) + optional $25 expedite<br><strong>What to have ready:</strong> business name, registered agent name + Texas address, organizer name + address, management structure (choose "member-managed")<br><strong>Registered agent:</strong> Jesica can serve as her own agent for free, or use a paid service (~$125/yr) to keep home address off public records.',
+        link: 'https://www.sos.state.tx.us/corp/sosda/', linkLabel: 'Go to SOSDirect'
+      },
+      {
+        id: 'llc4',
+        title: 'Get your EIN from the IRS',
+        badge: 'Free · 15 min', badgeType: 'green',
+        summary: 'The business\'s federal tax ID. Required before opening a bank account.',
+        detail: '<strong>Where:</strong> IRS.gov/ein — apply online directly, takes about 15 minutes, number issued immediately.<br><strong>Do not pay any third-party service for this.</strong> It is free from the IRS directly.<br><strong>Save:</strong> Print and store the EIN Assignment Notice — banks and grant applications will ask for it.',
+        link: 'https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online', linkLabel: 'Apply at IRS.gov'
+      },
+      {
+        id: 'llc5',
+        title: 'Open a dedicated business bank account',
+        badge: null,
+        summary: 'Every dollar in and out goes through here. Zero personal expenses — ever.',
+        detail: '<strong>Bring:</strong> approved Form 205, EIN letter, operating agreement, government ID<br><strong>Options:</strong> Chase Business Complete, Bank of America Business Advantage, local credit unions (lower fees), or Mercury/Relay (online, no monthly fees — great for small contractors)<br><strong>The rule:</strong> Never commingle personal and business funds. The business bank account is what makes the entity real in the eyes of the IRS and grant applications.',
+        link: null
+      },
+      {
+        id: 'llc6',
+        title: 'Execute the operating agreement',
+        badge: 'Attorney', badgeType: 'teal',
+        summary: 'The document that proves Jesica\'s control — required for grants and certifications.',
+        detail: '<strong>Cost:</strong> Typically $200–$500 for a simple single-member LLC agreement<br><strong>Must include:</strong> 100% Jesica ownership, day-to-day management authority held by Jesica, no non-member veto rights over business decisions<br><strong>Free alternatives:</strong> SCORE Austin offers templates and free review at score.org/austin. The SBA Women\'s Business Center also helps with this.<br><strong>Note:</strong> Texas doesn\'t legally require an operating agreement, but grant applications and WBENC/WOSB certifications will ask for it.',
+        link: 'https://www.score.org/austin', linkLabel: 'SCORE Austin — free templates'
+      },
+      {
+        id: 'llc7',
+        title: 'Set up bookkeeping from day one',
+        badge: 'Free option', badgeType: 'green',
+        summary: 'Wave is free and connects to the business bank account automatically.',
+        detail: '<strong>Wave</strong> (free) — connects to bank accounts, auto-categorizes, generates reports your CPA needs<br><strong>QuickBooks Self-Employed</strong> (~$15/mo) — slightly easier for 1099 contractors, auto-calculates quarterly estimated taxes<br><strong>What to track from day one:</strong> income per file/project, mileage (date, miles, destination, business purpose), software & subscriptions, insurance, phone/internet (business %), business meals (50% deductible — log who/what/why)',
+        link: 'https://www.waveapps.com/', linkLabel: 'Get Wave (free)'
+      },
+      {
+        id: 'llc8',
+        title: 'File the Texas franchise tax questionnaire',
+        badge: '90 days', badgeType: 'amber',
+        summary: 'Complete within 90 days of formation. Owe $0 if revenue is under $2.65M.',
+        detail: '<strong>Where:</strong> Texas Comptroller WebFile at comptroller.texas.gov/taxes/franchise<br><strong>Cost:</strong> $0 to file, $0 owed if annual revenue stays under $2.65M (the 2026/2027 threshold)<br><strong>Annual obligation:</strong> File the Public Information Report (PIR) by May 15 each year — even at $0 owed, missing it triggers a $50 penalty.<br><strong>Scam alert:</strong> After filing you\'ll get mail demanding payment for an "annual report." Texas LLCs have no such SOS filing. Ignore it.',
+        link: 'https://comptroller.texas.gov/taxes/franchise/', linkLabel: 'Texas Comptroller WebFile'
+      }
+    ]
+  },
+
+  vehicle: {
+    items: [
+      {
+        id: 'veh1',
+        title: 'Schedule a CPA consultation — before buying anything',
+        badge: 'Do first', badgeType: 'teal',
+        summary: 'The method election (mileage vs actual) is irrevocable. Get this right.',
+        detail: '<strong>Two decisions that must be made before the first business drive:</strong><br>1. <strong>Method election:</strong> Standard mileage (72.5¢/mile in 2026) vs. actual expenses (Section 179 + 100% bonus depreciation). You choose in year one and can\'t easily switch. For a high-value vehicle with high business use, actual expenses wins — but a CPA should model both.<br>2. <strong>Quarterly estimated taxes:</strong> As a 1099 contractor, Jesica owes federal taxes quarterly. The CPA sets this up so April isn\'t a surprise.',
+        link: null
+      },
+      {
+        id: 'veh2',
+        title: 'Understand the weight rule (GVWR > 6,000 lbs)',
+        badge: 'Key concept', badgeType: 'teal',
+        summary: 'Vehicles over 6,000 lbs avoid "luxury auto" caps — the deduction jumps dramatically.',
+        detail: '<strong>Under 6,000 lbs (cars, light SUVs):</strong> Luxury auto caps apply — first-year deduction limited to ~$12K regardless of price. Even with 100% bonus depreciation restored, these caps still apply.<br><strong>Heavy SUV (6,001–14,000 lbs):</strong> Section 179 up to $32,000 cap + 100% bonus depreciation on the remainder = full cost deductible in year one.<br><strong>Pickup truck / work vehicle over 6,000 lbs:</strong> Potentially no SUV cap — even better.<br><strong>How to verify:</strong> The GVWR is printed on a sticker on the driver\'s door jamb. That number is what the IRS uses. Always verify before purchasing.',
+        link: null
+      },
+      {
+        id: 'veh3',
+        title: 'Research and test drive qualifying vehicles',
+        badge: null,
+        summary: 'Full-size pickups and heavy SUVs are the target category.',
+        detail: '<strong>Popular qualifying vehicles (verify GVWR on door jamb sticker):</strong><br>• Ford F-150 — most configs 6,010–7,050 lbs<br>• Chevy Silverado 1500 — 6,400–7,300 lbs<br>• Ram 1500 — 6,010–7,100 lbs<br>• Toyota Tundra — consistently over 6,000 lbs<br>• Chevy Suburban — ~7,500 lbs (heavy SUV, $32K Section 179 cap)<br>• Ford Expedition — ~7,200–7,750 lbs (heavy SUV cap)<br>• Cadillac Escalade — ~7,400 lbs (heavy SUV cap)<br><strong>Best play for max deduction without the SUV cap:</strong> Full-size pickup (F-150, Silverado, Ram, Tundra).',
+        link: null
+      },
+      {
+        id: 'veh4',
+        title: 'Purchase the vehicle in the LLC\'s name',
+        badge: null,
+        summary: 'Title in the business name. Expect to personally guarantee the loan.',
+        detail: '<strong>Vehicle title:</strong> Must be in the LLC\'s name, not Jesica\'s personal name<br><strong>Financing:</strong> A new LLC has no credit history — lenders will require a personal guarantee. This is normal and expected. It doesn\'t affect the tax deduction.<br><strong>Down payment:</strong> Should come from the business bank account. If the account isn\'t funded yet, document a capital contribution (Jesica transfers personal funds to the LLC first).<br><strong>Insurance:</strong> Business auto insurance is different from personal — notify your insurer it\'s a business vehicle. Get it in the LLC\'s name.<br><strong>Dealer tip:</strong> Tell the dealer upfront it\'s an LLC purchase — they\'ll handle paperwork correctly.',
+        link: null
+      },
+      {
+        id: 'veh5',
+        title: 'Download a mileage tracking app',
+        badge: 'Before first drive', badgeType: 'amber',
+        summary: 'Contemporaneous logs are required. No log = no deduction.',
+        detail: '<strong>Best apps:</strong> MileIQ, Everlance, Driversnote, or TripLog — all auto-detect trips and let you swipe business/personal<br><strong>What to log per trip:</strong> Date, starting point, destination, business purpose (e.g., "client signing at 123 Main St" or "agent meeting with [name]"), miles<br><strong>Counts as business:</strong> Client signings, notary runs, agent meetings, title office, BD appointments, bank for business purposes, CPA/attorney for business<br><strong>Does NOT count:</strong> Commuting from home to a regular office, personal errands',
+        link: null
+      },
+      {
+        id: 'veh6',
+        title: 'Confirm business use percentage with your CPA',
+        badge: null,
+        summary: 'Only the business-use % is deductible. 80% use on a $55K truck = $44K deduction.',
+        detail: '<strong>The math:</strong><br>$55K F-150 at 100% business use → $55,000 deduction → ~$19,800 tax savings (at 36% combined rate)<br>$55K F-150 at 80% business use → $44,000 deduction → ~$15,840 tax savings<br>$75K Suburban at 100% business use → $75,000 deduction → ~$27,000 tax savings<br><br><strong>Recapture risk:</strong> If business use later drops below 50%, the IRS claws back accelerated deductions. So the vehicle needs to genuinely be a business vehicle going forward, not just in year one.',
+        link: null
+      },
+      {
+        id: 'veh7',
+        title: 'Log the first business trip immediately',
+        badge: 'Day one', badgeType: 'teal',
+        summary: 'The habit starts the moment you drive for business in the LLC\'s vehicle.',
+        detail: 'Open the mileage app before starting the engine. Log the date, starting location, destination, and business purpose. Do this for every single business trip going forward — it takes 30 seconds and is the entire paper trail the deduction depends on.',
+        link: null
+      }
+    ]
+  },
+
+  grants: {
+    items: [
+      {
+        id: 'grt1',
+        title: 'Write your 500-word core grant narrative',
+        badge: 'Write once · use everywhere', badgeType: 'teal',
+        summary: 'The story every application will ask for. Write it once, adapt it slightly per program.',
+        detail: '<strong>Your story:</strong><br>• Georgetown-based, woman-owned title and escrow business built on 10+ years of hands-on industry expertise<br>• Operating at the intersection of real estate closing services and software development (Polaris title platform)<br>• Serving local agents and homebuyers in one of Texas\'s fastest-growing markets<br>• A licensed professional building something she owns — not just working a job<br><br><strong>Tone tip:</strong> Don\'t sound corporate. Judges have read thousands of applications with "leverage synergies" and "scalable solutions." A real person\'s real story stands out. Write like you\'re telling a friend.',
+        link: null
+      },
+      {
+        id: 'grt2',
+        title: 'Build your grant document folder',
+        badge: 'One-time setup', badgeType: 'teal',
+        summary: 'Prepare these once — every application asks for the same set.',
+        detail: '<strong>Put these in one folder and keep them ready:</strong><br>• Approved Certificate of Formation (Form 205) showing Jesica\'s name and ownership<br>• IRS EIN Assignment Notice<br>• Operating agreement (showing 51%+ or 100% women ownership)<br>• Business bank account name and routing/account numbers<br>• Government-issued ID (driver\'s license or passport)<br>• 300–500 word business narrative (from Step 1)<br>• 1–2 sentence elevator pitch version<br>• Basic website or Google Business profile URL (adds credibility)',
+        link: null
+      },
+      {
+        id: 'grt3',
+        title: 'Submit IFundWomen Universal Application',
+        badge: 'Free · one-time', badgeType: 'green',
+        summary: 'One form that passively matches you to partner-funded grants as they open.',
+        detail: 'Fill out one profile at IFundWomen.com and they automatically notify you when a partner grant matches your profile. Previous grant partners include Visa, American Express, and Neutrogena. Takes about 20 minutes once, then it works passively in the background. Free to submit.',
+        link: 'https://www.ifundwomen.com/grants/universal-grant-application-0', linkLabel: 'Apply at IFundWomen'
+      },
+      {
+        id: 'grt4',
+        title: 'Apply for the Amber Grant — every month',
+        badge: '$10K · $15/month', badgeType: 'amber',
+        summary: 'Rolling monthly, no history required. One application enters all categories.',
+        detail: '<strong>Amount:</strong> $10,000 monthly (3 winners) + $50,000 year-end grants (3 winners)<br><strong>Eligibility:</strong> US-based, 50%+ women-owned. Pre-revenue and new businesses welcome.<br><strong>Deadline:</strong> Last day of each month — rolling<br><strong>Fee:</strong> $15 (fee waiver available — email info@ambergrantsforwomen.com)<br><strong>Strategy:</strong> Apply in the first month, then reapply each month with a slightly updated narrative. Monthly winners are eligible for the $50K year-end grant.',
+        link: 'https://ambergrantsforwomen.com/get-an-amber-grant/apply-now/', linkLabel: 'Apply at AmberGrantsForWomen'
+      },
+      {
+        id: 'grt5',
+        title: 'Apply for the HerRise Microgrant — every month',
+        badge: '$1K · $15/month', badgeType: 'amber',
+        summary: 'Rolling monthly. Smaller amount, but 30 minutes and $15 per month is worth it.',
+        detail: '<strong>Amount:</strong> $1,000/month<br><strong>Eligibility:</strong> US-based for-profit, 51%+ women-owned, less than $1M annual revenue<br><strong>Deadline:</strong> Last day of each month<br><strong>Fee:</strong> $15<br><strong>Apply at:</strong> hersuitespot.com<br><strong>Strategy:</strong> Stack this with the Amber Grant. Once the core narrative is written, each application takes under 20 minutes to adapt.',
+        link: null
+      },
+      {
+        id: 'grt6',
+        title: 'Apply for the Hey Helen Grant',
+        badge: '⚠ Aug 30, 2026', badgeType: 'red',
+        summary: '$10,000 unrestricted. Requires 100% women-owned. Deadline August 30.',
+        detail: '<strong>Amount:</strong> $10,000 unrestricted cash<br><strong>Eligibility:</strong> 100% women-owned (not 51% — must be 100%), US-based, revenue under $1M/year<br><strong>Deadline:</strong> August 30, 2026 — this is the current cycle<br><strong>Fee:</strong> $15<br><strong>Apply at:</strong> visionaries.co/helen-grant<br><strong>Important:</strong> The 100% ownership requirement means Jeremiah cannot hold any ownership stake in the LLC for this specific grant. If ownership is 100% Jesica, she\'s eligible.',
+        link: 'https://visionaries.co/helen-grant/', linkLabel: 'Apply at visionaries.co', urgent: true
+      },
+      {
+        id: 'grt7',
+        title: 'Get vendor quotes for TWU StartHER',
+        badge: '⚠ Before Sep 1', badgeType: 'amber',
+        summary: 'The application requires documentation of planned purchases — no estimates allowed.',
+        detail: '<strong>Why prepare early:</strong> The TWU StartHER grant requires actual vendor quotes for every item you\'re requesting funds for. No rounded estimates, no guesses. Prepare these BEFORE September 1 when the application opens, so you\'re ready to submit immediately.<br><strong>What to get quotes for:</strong> Equipment, software subscriptions, marketing materials, business tools — whatever $5,000 would most meaningfully move the business forward<br><strong>Where to get quotes:</strong> Ask vendors for a written estimate or screenshot prices from vendor websites with the date visible.',
+        link: null
+      },
+      {
+        id: 'grt8',
+        title: 'Apply for the TWU StartHER Grant',
+        badge: '⚠ Sep 1–23, 2026', badgeType: 'red',
+        summary: '$5,000 Texas-only grant for women-owned startups. Window is 23 days — don\'t miss it.',
+        detail: '<strong>Amount:</strong> $5,000 (two installments of $2,500)<br><strong>Eligibility:</strong> Texas-based, 51%+ women-owned, formed after 09/25/2020, 5 or fewer employees including the owner, for-profit legal entity<br><strong>Application opens:</strong> September 1, 2026<br><strong>Final deadline:</strong> September 23, 2026 — no late submissions, no exceptions<br><strong>Match required:</strong> Minimum $500 non-debt owner investment<br><strong>Apply at:</strong> twu.edu/center-women-entrepreneurs/starther<br><strong>Key requirement:</strong> All documentation must be in place before submitting — formation docs, operating agreement, vendor quotes for planned purchases.',
+        link: 'https://twu.edu/center-women-entrepreneurs/starther/', linkLabel: 'TWU StartHER Program', urgent: true
+      }
+    ]
+  }
+};
+
+// ────────────────────────────────────────────────────────────
+// STATE
+// ────────────────────────────────────────────────────────────
+const STORAGE_KEY = 'jesica_checklist_v1';
+let checked = {};
+
+function loadState() {
+  try { checked = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
+  catch { checked = {}; }
+}
+function saveState() {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(checked)); } catch {}
+}
+
+// ────────────────────────────────────────────────────────────
+// RENDER CHECKLIST
+// ────────────────────────────────────────────────────────────
+function buildChecklist() {
+  Object.entries(TRACKS).forEach(([trackId, track]) => {
+    const container = document.getElementById('list-' + trackId);
+    container.innerHTML = '';
+    track.items.forEach(item => {
+      const isChecked = !!checked[item.id];
+      const isUrgent = item.badgeType === 'red';
+      const isAmber = item.badgeType === 'amber' && item.badge && item.badge.includes('⚠');
+
+      const card = document.createElement('div');
+      card.className = 'item-card' + (isChecked ? ' checked' : '') + (isUrgent ? ' urgent-high' : isAmber ? ' urgent' : '');
+      card.id = 'card-' + item.id;
+
+      const badgeHtml = item.badge
+        ? `<span class="badge badge-${item.badgeType}">${item.badge}</span>`
+        : '';
+
+      const linkHtml = item.link
+        ? `<a href="${item.link}" target="_blank" rel="noopener" class="detail-link">
+             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+             ${item.linkLabel}
+           </a>`
+        : '';
+
+      card.innerHTML = `
+        <div class="item-main" onclick="toggleItem('${item.id}', this)">
+          <div class="item-checkbox">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+          <div class="item-content">
+            <div class="item-title-row">
+              <span class="item-title">${item.title}</span>
+              ${badgeHtml}
+            </div>
+            <div class="item-summary">${item.summary}</div>
+          </div>
+          <button class="item-expand-btn" onclick="toggleDetail(event, '${item.id}')" aria-label="Show details">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+        </div>
+        <div class="item-detail" id="detail-${item.id}">
+          ${item.detail}
+          ${linkHtml}
+        </div>`;
+
+      container.appendChild(card);
+    });
+  });
+  updateProgress();
+}
+
+function toggleItem(itemId, mainEl) {
+  checked[itemId] = !checked[itemId];
+  saveState();
+  const card = document.getElementById('card-' + itemId);
+  if (checked[itemId]) {
+    card.classList.add('checked');
+  } else {
+    card.classList.remove('checked');
+  }
+  updateProgress();
+}
+
+function toggleDetail(e, itemId) {
+  e.stopPropagation();
+  const detail = document.getElementById('detail-' + itemId);
+  const btn = e.currentTarget;
+  const isOpen = detail.classList.contains('open');
+  detail.classList.toggle('open', !isOpen);
+  btn.classList.toggle('open', !isOpen);
+}
+
+// ────────────────────────────────────────────────────────────
+// PROGRESS
+// ────────────────────────────────────────────────────────────
+function updateProgress() {
+  let total = 0, done = 0;
+  Object.entries(TRACKS).forEach(([trackId, track]) => {
+    const trackTotal = track.items.length;
+    const trackDone = track.items.filter(i => checked[i.id]).length;
+    total += trackTotal;
+    done += trackDone;
+    const pct = trackTotal > 0 ? (trackDone / trackTotal) * 100 : 0;
+    const bar = document.getElementById('bar-' + trackId);
+    const text = document.getElementById('text-' + trackId);
+    const pill = document.getElementById('pill-' + trackId);
+    if (bar) bar.style.width = pct + '%';
+    if (text) text.textContent = `${trackDone} / ${trackTotal}`;
+    if (pill) pill.textContent = `${trackDone}/${trackTotal}`;
+  });
+  const overallPct = total > 0 ? (done / total) * 100 : 0;
+  document.getElementById('overallCount').textContent = `${done} / ${total}`;
+  document.getElementById('overallBar').style.width = overallPct + '%';
+}
+
+// ────────────────────────────────────────────────────────────
+// TAB SWITCHING
+// ────────────────────────────────────────────────────────────
+function switchTab(trackId) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.track-section').forEach(s => s.classList.remove('visible'));
+  document.getElementById('tab-' + trackId).classList.add('active');
+  document.getElementById('section-' + trackId).classList.add('visible');
+}
+
+// ────────────────────────────────────────────────────────────
+// CHAT
+// ────────────────────────────────────────────────────────────
+let chatOpen = false;
+let chatHistory = [];
+let apiKey = '';
+
+function openChat() {
+  chatOpen = true;
+  document.getElementById('chatPanel').classList.add('open');
+  document.getElementById('chatOverlay').classList.add('open');
+  const stored = sessionStorage.getItem('jesica_api_key');
+  if (stored) {
+    apiKey = stored;
+    document.getElementById('apiKeyBanner').classList.add('hidden');
+    document.getElementById('apiKeyInputWrap').classList.add('hidden');
+  }
+  setTimeout(() => document.getElementById('chatInput').focus(), 300);
+}
+
+function closeChat() {
+  chatOpen = false;
+  document.getElementById('chatPanel').classList.remove('open');
+  document.getElementById('chatOverlay').classList.remove('open');
+}
+
+function saveApiKey() {
+  const val = document.getElementById('apiKeyField').value.trim();
+  if (!val || !val.startsWith('sk-')) {
+    document.getElementById('apiKeyField').style.borderColor = '#EF4444';
+    setTimeout(() => document.getElementById('apiKeyField').style.borderColor = '', 1500);
+    return;
+  }
+  apiKey = val;
+  sessionStorage.setItem('jesica_api_key', val);
+  document.getElementById('apiKeyBanner').classList.add('hidden');
+  document.getElementById('apiKeyInputWrap').classList.add('hidden');
+  appendMsg('ai', 'API key saved. Now I\'m fully activated and ready to help with anything on your checklist. What would you like to tackle first?');
+}
+
+function autoGrow(el) {
+  el.style.height = 'auto';
+  el.style.height = Math.min(el.scrollHeight, 100) + 'px';
+}
+
+function appendMsg(role, text) {
+  const container = document.getElementById('chatMessages');
+  const div = document.createElement('div');
+  div.className = `msg msg-${role}`;
+  div.innerHTML = `<div class="msg-bubble">${text}</div>`;
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
+  return div;
+}
+
+function showTyping() {
+  const container = document.getElementById('chatMessages');
+  const div = document.createElement('div');
+  div.className = 'msg msg-ai';
+  div.id = 'typingIndicator';
+  div.innerHTML = `<div class="typing-bubble"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div>`;
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
+}
+
+function removeTyping() {
+  const el = document.getElementById('typingIndicator');
+  if (el) el.remove();
+}
+
+const SYSTEM_PROMPT = `You are Jesica's personal business launch guide. You know her complete situation and give concise, actionable answers — no fluff, no jargon.
+
+JESICA'S SITUATION:
+- Transitioning from W-2 to 1099 contractor in the title/escrow industry in Georgetown, TX (Williamson County — one of Texas's fastest-growing areas)
+- Starting a woman-owned LLC to formalize contracting work (filing June/July 2026)
+- Also consulting for Abode Labs (Polaris title software platform) at $100/hr
+- Continuing as responsible escrow officer for Teleo Title on a per-file basis
+- Her partner Jeremiah builds AI tools for the title industry
+
+THREE TRACKS:
+
+TRACK 1 — FILE THE LLC
+1. Decide ownership (100% Jesica = qualifies for Hey Helen + all grants)
+2. Search name at dir.sos.state.tx.us
+3. File Form 205 ($300, SOSDirect, approved in 1-2 days)
+4. Get EIN at IRS.gov/ein (free, 15 min)
+5. Open dedicated business bank account (needs LLC docs + EIN)
+6. Execute operating agreement with attorney ($200-500, confirms woman-owned control)
+7. Set up bookkeeping (Wave: free)
+8. File TX franchise tax questionnaire within 90 days (Comptroller WebFile, $0 owed if under $2.65M)
+
+KEY FACTS: Franchise tax $0 under $2.65M. Annual PIR due May 15. Registered agent can be Jesica or paid service (~$125/yr). Ignore mail demanding "annual report" fees — scam.
+
+TRACK 2 — VEHICLE
+CRITICAL: Talk to CPA BEFORE buying. Method election is irrevocable.
+
+The weight rule:
+- Under 6,000 lbs GVWR: luxury auto caps (~$12K first-year max). Bad.
+- Over 6,000 lbs GVWR: full deduction possible.
+- Heavy SUV (6,001-14,000 lbs): $32K Section 179 + 100% bonus on remainder = fully deductible year one
+- Full-size pickup over 6,000 lbs: potentially no SUV cap at all
+
+100% bonus depreciation restored in 2026 (One Big Beautiful Bill, signed July 2025), good through 2030.
+
+Real numbers (at 36% combined SE+federal tax):
+- $55K F-150, 100% business → ~$19,800 tax savings
+- $75K Suburban, 100% business → ~$27,000 tax savings
+
+Requirements: LLC must be formed first. Vehicle in LLC's name. >50% business use. Contemporaneous mileage log (MileIQ, Everlance, etc.). Business auto insurance.
+
+TRACK 3 — GRANTS
+Available NOW (no history needed):
+- Amber Grant: $10K/month + $50K year-end, rolling, $15/month, ambergrantsforwomen.com
+- HerRise Microgrant: $1K/month, rolling, $15/month
+- IFundWomen Universal: free, one-time, passive matching
+
+TIME-SENSITIVE:
+- August 30, 2026: Hey Helen Grant — $10K, 100% women-owned required, visionaries.co/helen-grant
+- September 1-23, 2026: TWU StartHER — $5K Texas grant, opens Sep 1, needs vendor quotes ready BEFORE applying, twu.edu/center-women-entrepreneurs/starther
+
+GRANT STRATEGY: Write one 500-word personal narrative once (Georgetown title expert, Polaris consulting, woman building something she owns). Adapt slightly per application. Judges want real stories not corporate language.
+
+Free resources: SCORE Austin (score.org/austin), SBA Women's Business Center Austin, Austin SBDC (sbdc.utexas.edu)
+
+RESPONSE STYLE:
+- Answer in 2-4 short paragraphs max
+- Give specific URLs, dollar amounts, and deadlines
+- Be direct and encouraging, not corporate
+- If "what should I do today/first?" — tell the single most important next action
+- Format nicely: use line breaks for readability, bold key numbers/deadlines`;
+
+async function sendMessage() {
+  const input = document.getElementById('chatInput');
+  const text = input.value.trim();
+  if (!text) return;
+
+  if (!apiKey) {
+    appendMsg('ai', 'To use the AI assistant, paste your Anthropic API key in the field above and click Activate. You can get one at <a href="https://console.anthropic.com" target="_blank">console.anthropic.com</a>.');
+    return;
+  }
+
+  input.value = '';
+  input.style.height = 'auto';
+  appendMsg('user', escHtml(text));
+
+  chatHistory.push({ role: 'user', content: text });
+
+  document.getElementById('sendBtn').disabled = true;
+  showTyping();
+
+  try {
+    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        system: SYSTEM_PROMPT,
+        messages: chatHistory
+      })
+    });
+
+    const data = await resp.json();
+
+    if (!resp.ok) {
+      throw new Error(data.error?.message || `API error ${resp.status}`);
+    }
+
+    const reply = data.content?.[0]?.text || 'No response received.';
+    chatHistory.push({ role: 'assistant', content: reply });
+
+    removeTyping();
+    appendMsg('ai', formatReply(reply));
+
+  } catch (err) {
+    removeTyping();
+    appendMsg('ai', `Sorry, there was an error: ${escHtml(err.message)}. Check that your API key is correct.`);
+  }
+
+  document.getElementById('sendBtn').disabled = false;
+  document.getElementById('chatInput').focus();
+}
+
+function sendQuick(prompt) {
+  document.getElementById('chatInput').value = prompt;
+  sendMessage();
+}
+
+function escHtml(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function formatReply(text) {
+  return text
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.*?)\*/g, '<em>$1</em>')
+    .replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>')
+    .replace(/\n\n/g, '<br><br>')
+    .replace(/\n/g, '<br>');
+}
+
+// ────────────────────────────────────────────────────────────
+// INIT
+// ────────────────────────────────────────────────────────────
+loadState();
+buildChecklist();
+
+// Check for stored API key
+const storedKey = sessionStorage.getItem('jesica_api_key');
+if (storedKey) {
+  apiKey = storedKey;
+  document.getElementById('apiKeyBanner').classList.add('hidden');
+  document.getElementById('apiKeyInputWrap').classList.add('hidden');
+}
+</script>
+</body>
+</html>
