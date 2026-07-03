@@ -97,14 +97,19 @@
 .hero-image{
   position:relative;
   margin-left:auto;
-  max-width:420px;
+  /* Reduce the maximum width so the headshot appears smaller and more balanced */
+  max-width:360px;
   aspect-ratio:1;
   border-radius:var(--radius);
+  /* Align the image container to the top of the grid to mirror Jeremiah's layout */
+  align-self:start;
 }
 .hero-image img{
   width:100%;
   height:100%;
+  /* Maintain cover scaling but shift the crop up so the head is not cut off */
   object-fit:cover;
+  object-position:top;
   border-radius:inherit;
   display:block;
 }
@@ -119,4 +124,16 @@
   -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
   -webkit-mask-composite:xor;
           mask-composite:exclude;
+}
+
+/*
+ * Use the Fraunces serif font for major headings to mirror Jeremiah's professional site
+ */
+.hero h1,
+.section h2,
+.callout h3,
+.info-card h3,
+.project-card h3 {
+  font-family:'Fraunces', serif;
+  font-weight:700;
 }
